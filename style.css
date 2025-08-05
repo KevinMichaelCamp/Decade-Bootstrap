@@ -1,88 +1,16 @@
-/* 1. Use a more-intuitive box-sizing model */
 /* CSS Font Stack */
 body {
     font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-/* 2. Remove default margin */
 * {
     margin: 0;
-}
-
-/* 3. Enable keyword animations */
-@media (prefers-reduced-motion: no-preference) {
-    html {
-        interpolate-size: allow-keywords;
-    }
-}
-
-body {
-    /* 4. Add accessible line-height */
-    line-height: 1.5;
-    /* 5. Improve text rendering */
-    -webkit-font-smoothing: antialiased;
-}
-
-/* 6. Improve media defaults */
-img,
-picture,
-video,
-canvas,
-svg {
-    display: block;
-    max-width: 100%;
-}
-
-/* 7. Inherit fonts for form controls */
-input,
-button,
-textarea,
-select {
-    font: inherit;
-}
-
-/* 8. Avoid text overflows */
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    overflow-wrap: break-word;
-}
-
-/* 9. Improve line wrapping */
-p {
-    text-wrap: pretty;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    text-wrap: balance;
-}
-
-/*
-    10. Create a root stacking context
-  */
-#root,
-#__next {
-    isolation: isolate;
+    padding: 0;
 }
 
 /* index.html CSS */
 .divider {
-    margin: 5em;
+    margin: 5rem;
     border: 1pt solid rgb(100, 100, 100);
     ;
 }
@@ -91,6 +19,9 @@ h6 {
     font-weight: bolder;
 }
 
+.gap {
+    gap: 2rem;
+}
 .green {
     color: green;
 }
@@ -102,3 +33,57 @@ h6 {
 .small-caps {
     font-size: .8em;
 }
+
+
+
+header {
+    background: #2A7B9B;
+    background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(82, 179, 79, 1) 51%, rgba(60, 255, 0, 1) 100%);
+    color: white;
+    min-height: 6rem;
+}
+
+header img {
+    height: 5rem;
+    width: 2.5rem;
+
+}
+
+header h1 {
+    font-size: 3em;
+}
+
+.frame {
+    width: 100%;
+    overflow: hidden;
+}
+
+.frame img {
+    height: 100%;
+    width: 100%;
+    /* object-fit: cover; */
+}
+
+.section {
+    color: rgb(100, 100, 100);
+    gap: 5em;
+    padding: 0 5em;
+}
+
+.section p{
+    max-width: 30em;
+}
+
+.pic-frame {
+    border-radius: 1em;
+    height: 25em;
+    width: 30em;
+}
+
+.pic-frame img {
+    border-radius: 2em;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
